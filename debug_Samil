@@ -1,0 +1,13 @@
+adb shell am start -D -n com.iboluo.boluovl/.activity.SplashActivity
+
+adb forward tcp:4510 jdwp:4560
+
+adb forward tcp:8700 jdwp:3265 
+
+//显示adb连接列表
+adb devices
+ADB命令指定设备的序列号了。
+adb -s emulator-5554 shell
+
+指定执行某个adb设备运行调试模式
+adb -s 127.0.0.1:62001 shell am start -D -n com.ss.android.article.ffdh/com.ss.android.article.ui.LaunchActivity
