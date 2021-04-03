@@ -1,0 +1,133 @@
+.class Lcom/ss/android/article/adapter/P;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/chad/library/adapter/base/BaseQuickAdapter$c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/ss/android/article/adapter/FindVideoDetailAdapter;->a(Lcom/chad/library/adapter/base/BaseViewHolder;Lcom/ss/android/article/bean/findvideo/FindVideoBaseBean;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/ss/android/article/adapter/FindVideoVideoListAdapter;
+
+.field final synthetic b:Lcom/ss/android/article/bean/findvideo/FindVideoRecommendData$RecommendBean;
+
+.field final synthetic c:Lcom/ss/android/article/adapter/FindVideoDetailAdapter;
+
+
+# direct methods
+.method constructor <init>(Lcom/ss/android/article/adapter/FindVideoDetailAdapter;Lcom/ss/android/article/adapter/FindVideoVideoListAdapter;Lcom/ss/android/article/bean/findvideo/FindVideoRecommendData$RecommendBean;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/ss/android/article/adapter/P;->c:Lcom/ss/android/article/adapter/FindVideoDetailAdapter;
+
+    iput-object p2, p0, Lcom/ss/android/article/adapter/P;->a:Lcom/ss/android/article/adapter/FindVideoVideoListAdapter;
+
+    iput-object p3, p0, Lcom/ss/android/article/adapter/P;->b:Lcom/ss/android/article/bean/findvideo/FindVideoRecommendData$RecommendBean;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/chad/library/adapter/base/BaseQuickAdapter;Landroid/view/View;I)V
+    .locals 3
+
+    .line 1
+    iget-object p1, p0, Lcom/ss/android/article/adapter/P;->a:Lcom/ss/android/article/adapter/FindVideoVideoListAdapter;
+
+    invoke-virtual {p1, p3}, Lcom/chad/library/adapter/base/BaseQuickAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;
+
+    .line 2
+    iget-object v0, p0, Lcom/ss/android/article/adapter/P;->b:Lcom/ss/android/article/bean/findvideo/FindVideoRecommendData$RecommendBean;
+
+    iget-object v0, v0, Lcom/ss/android/article/bean/findvideo/FindVideoRecommendData$RecommendBean;->member:Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean$MemberBean;
+
+    iput-object v0, p1, Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;->member:Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean$MemberBean;
+
+    .line 3
+    iget v0, p1, Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;->mv_type:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    .line 4
+    new-instance p3, Ljava/util/ArrayList;
+
+    invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 5
+    invoke-interface {p3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 6
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1, p3, v1}, Lcom/ss/android/article/ui/ShortVideoPlayerActivity;->a(Landroid/content/Context;Ljava/util/List;I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x3
+
+    if-ne v0, p1, :cond_1
+
+    .line 7
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/ss/android/article/adapter/P;->a:Lcom/ss/android/article/adapter/FindVideoVideoListAdapter;
+
+    invoke-virtual {p2, p3}, Lcom/chad/library/adapter/base/BaseQuickAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;
+
+    iget p2, p2, Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;->id:I
+
+    invoke-static {p1, p2}, Lcom/ss/android/article/ui/SeeMorePlayerActivity;->a(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/ss/android/article/adapter/P;->a:Lcom/ss/android/article/adapter/FindVideoVideoListAdapter;
+
+    invoke-virtual {p2, p3}, Lcom/chad/library/adapter/base/BaseQuickAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;
+
+    invoke-static {p1, v1, p2}, Lcom/ss/android/article/ui/VideoDetailPlayerActivity;->a(Landroid/content/Context;ZLcom/ss/android/article/listplayer/adapter/ListLikeVideoBean;)V
+
+    :goto_0
+    return-void
+.end method
