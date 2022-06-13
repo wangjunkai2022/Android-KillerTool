@@ -1,0 +1,3 @@
+[submodule "jadx/jadx"]
+	path = jadx/jadx
+	url = ../../skylot/jadx.git
