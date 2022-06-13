@@ -4,3 +4,6 @@
 [submodule "projects/wxsq_killer_project"]
 	path = projects/wxsq_killer_project
 	url = https://github.com/exyoyou/wxsq_killer_project.git
+[submodule "projects/cunyu_killer_project"]
+	path = projects/cunyu_killer_project
+	url = https://github.com/exyoyou/cunyu_killer_project.git
