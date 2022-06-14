@@ -7,3 +7,6 @@
 [submodule "projects/cunyu_killer_project"]
 	path = projects/cunyu_killer_project
 	url = https://github.com/exyoyou/cunyu_killer_project.git
+[submodule "killer_tools/jadx/jadx"]
+	path = killer_tools/jadx/jadx
+	url = https://github.com/skylot/jadx.git
