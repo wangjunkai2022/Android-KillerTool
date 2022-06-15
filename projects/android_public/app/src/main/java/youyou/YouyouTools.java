@@ -3,6 +3,7 @@ package youyou;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.util.Log;
 
 public class YouyouTools {
     ///复制文字到剪切板
@@ -13,5 +14,9 @@ public class YouyouTools {
         ClipData mClipData = ClipData.newPlainText("Label", str);
         // 将ClipData内容放到系统剪贴板里。
         cm.setPrimaryClip(mClipData);
+    }
+
+    public static void Log(String str1, String str2) {
+        Log.i(str1, str2);
     }
 }
