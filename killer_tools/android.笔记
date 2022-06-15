@@ -1,0 +1,5 @@
+查看Android的cpu架构
+adb shell getprop ro.product.cpu.abi
+
+已debuging模式运行apk
+adb -s 127.0.0.1:62001 shell am set-debug-app -w com.o7f6ce52e9da.x03152b4c22z
