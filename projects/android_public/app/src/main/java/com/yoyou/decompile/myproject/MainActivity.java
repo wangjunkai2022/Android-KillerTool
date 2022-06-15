@@ -18,7 +18,7 @@ import com.yoyou.decompile.myproject.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import youyou.YouyouTools;
+import youyou.YouTools;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        YouyouTools.CloneStringToClipboard("popopop", this);
+        YouTools.CloneStringToClipboard("popopop", this);
     }
 
     @Override
