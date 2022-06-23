@@ -1,0 +1,21 @@
+# download 1080p video in mp4 format
+-f 'bv*[height<=1080]+ba'
+
+# external downloader aria2
+--downloader aria2c --downloader-args aria2c:'-c -j 3 -x 3 -s 3 -k 1M --no-conf'
+
+# native downloader for dash and m3u8
+--downloader 'dash,m3u8:native'
+
+# restrict filenames
+#--restrict-filenames
+
+# merge output format mkv
+--merge-output-format mkv
+
+#使用 –embed-thumbnail 将视频缩略图嵌入到视频文件中
+–embed-thumbnail
+
+#将字幕嵌入视频文件（如果存在）–embed-subbs
+–embed-subbs
+
