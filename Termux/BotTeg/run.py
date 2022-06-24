@@ -76,9 +76,14 @@ async def main():
     # 
     #         await client.download_media(message=message, file=files.name, progress_callback=progress_callback)
 
+    # 签到
     async def checkSing():
-        await asyncio.sleep(random.randint(-300, 300))
+        # 💘粿粿|PornembyBot
+        # PornEmby专属机器人，命令输入/start调用键盘，使用功能
         await client.send_message('PronembyTGBot2_bot', "/start")
+
+        # 厂妹 发送签到信息
+        await client.send_message('EmbyPublicBot', "/checkin")
 
     # await checkSing()
 
@@ -97,11 +102,16 @@ async def main():
         if event.chat_id != -1001241168082:
             print(message)
         print(event.chat_id)
-        # if event.chat_id == 1064584038:
-        #     button = message.buttons[0][0]
-        #     if(button):
-        #         print(button)
-        #         await button.click()
+        if event.chat_id == 1996836328:  # 💘粿粿|PornembyBot 的回复
+            if message.buttons and message.buttons[0] and message.buttons[0][1]:
+                await message.buttons[0][1].click()
+        elif event.chat_id == 1429576125:  # 厂妹 @EmbyPublicBot
+            if message.message.find("你今天已经签到过了") != -1:
+                print(message.message)
+            else:
+                print("EmbyPublicBot 可以签到")
+                # if message.buttons and message.buttons[0] and message.buttons[0][1]:
+                #     await message.buttons[0][1].click()
 
     client.add_event_handler(callback=msg_event_handler,
                              event=events.NewMessage(incoming=True)
