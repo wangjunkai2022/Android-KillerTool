@@ -27,13 +27,14 @@ import com.tencent.live2.impl.V2TXLivePlayerImpl;
 import com.yoyou.decompile.myproject.databinding.ActivityLiveBinding;
 
 import youyou.ClipBoardUtil;
+import youyou.YouTools;
 
 public class LiveActivity extends AppCompatActivity {
 
     private ActivityLiveBinding binding;
     private V2TXLivePlayer mLivePlayer;               //直播拉流的视频播放器
 
-    private String mPlayURL = "rtmp://6s2z27kp8g3f8sofztf2.zgxhzm.com/live/71612635_8a6ccfeeb13b3eb47d6dd97cefe6f86b?token=cdf22a3966ed4598f930a56d4393b782&t=1655296323";
+    private String mPlayURL = "rtmp://pawuasl1pzd2bx70.0csp7bqtxeaj.sourcelandchina.com/live/490463865?token=952e76b21b5322858f21a4abf34ecd88&t=1740544743";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,11 +139,10 @@ public class LiveActivity extends AppCompatActivity {
          * result返回值：
          * 0 V2TXLIVE_OK; -2 V2TXLIVE_ERROR_INVALID_PARAMETER; -3 V2TXLIVE_ERROR_REFUSED;
          */
-        int code = mLivePlayer.startPlay(playURL);
-        if (code != 0) {
-            Toast.makeText(this, "~ 播放失败 是否是地址不正确", Toast.LENGTH_SHORT).show();
-        }
-
+//        int code = mLivePlayer.startPlay(playURL);
+//        if (code != 0) {
+//            Toast.makeText(this, "~ 播放失败 是否是地址不正确", Toast.LENGTH_SHORT).show();
+//        }
         //处理UI相关操作
     }
 }

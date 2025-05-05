@@ -37,15 +37,17 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
+        final MainActivity a = this;
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                String str = "开始播放:rtmp://1vbxgiansox48o51.0csp7bqtxeaj.sourcelandchina.com/live/453446254?token=3c22af370ab2aaae82551280e1f5b15a&t=1740562742";
+                YouTools.showConfirmationDialog(str, a);
             }
         });
-        YouTools.CloneStringToClipboard("popopop", this);
+//        YouTools.CloneStringToClipboard("popopop", this);
     }
 
     @Override
